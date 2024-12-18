@@ -1,0 +1,19 @@
+<p class="w3-text-green w3-padding"><%= notice %></p>
+
+<% content_for :title, "Country Data Finals" %>
+
+<div class="w3-container">
+  <h1 class="w3-center w3-text-blue">Country Data Finals</h1>
+
+  <div id="country_data_finals" class="w3-row-padding">
+    <% @country_data_finals.each do |country_data_final| %>
+      <div class="w3-col l4 m6 s12">
+        <%= render country_data_final %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="w3-center w3-margin-top">
+    <%= link_to "New Country Data Final", new_country_data_final_path, class: "w3-button w3-green w3-round" %>
+  </div>
+</div>
